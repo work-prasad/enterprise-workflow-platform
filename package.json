@@ -1,0 +1,15 @@
+{
+  "name": "enterprise-workflow-platform",
+  "version": "1.0.0",
+  "description": "A multi-tenant enterprise workflow platform built with NestJS and PostgreSQL",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "pnpm@10.17.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^7.0.2"
+  }
+}
