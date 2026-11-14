@@ -8,3 +8,7 @@ export type {
   DatabaseConfig,
   DatabaseConnection,
 } from './database';
+
+export {
+  createMigrator,
+} from './migration.provider';
