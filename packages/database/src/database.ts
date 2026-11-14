@@ -40,3 +40,5 @@ export async function closeDatabase<DB extends object>(
 ): Promise<void> {
   await db.destroy();
 }
+
+export type DatabaseConnection<DB extends object = Database> = Kysely<DB>;

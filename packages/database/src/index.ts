@@ -6,4 +6,5 @@ export {
 export type {
   Database,
   DatabaseConfig,
+  DatabaseConnection,
 } from './database';
