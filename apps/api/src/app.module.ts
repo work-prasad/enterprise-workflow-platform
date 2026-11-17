@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
 import { HealthController } from './health.controller';
+import { AuthModule } from './auth/auth.module';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
@@ -15,9 +16,12 @@ import { DatabaseModule } from './database/database.module';
         PORT: Joi.number().port().default(3000),
         DATABASE_URL: Joi.string().required(),
         DB_POOL_MAX: Joi.number().integer().min(1).default(10),
+        KEYCLOAK_ISSUER: Joi.string().uri().required(),
+        KEYCLOAK_AUDIENCE: Joi.string().required(),
       }),
     }),
     DatabaseModule,
+    AuthModule,
   ],
   controllers: [HealthController],
 })
